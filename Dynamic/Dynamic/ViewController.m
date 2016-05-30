@@ -37,7 +37,6 @@
     
     UISwipeGestureRecognizer *swipGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swippedGesture:)];
     [self.view addGestureRecognizer:swipGesture];
-//    swipGesture.numberOfTouchesRequired = 2;
     [swipGesture requireGestureRecognizerToFail:tapGesture];
     
 }
@@ -49,22 +48,20 @@
     self.isClear = YES;
     __block NSInteger num = 0;
     
-    for (UIView *subView in self.view.subviews)
-    {
+    [self.view.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         num ++;
         [UIView animateWithDuration:2.0 delay:0.2 options:UIViewAnimationOptionCurveLinear animations:^{
-            
-            subView.alpha = 0.0;
-            
-        } completion:^(BOOL finished) {
-            if (--num == 0) {
-                self.isClear = NO;
-            }
-            
-            [self.animator removeItem:subView];
-            [subView removeFromSuperview];
-        }];
-    }
+           obj.alpha = 0.0f;
+       } completion:^(BOOL finished) {
+           if (--num == 0) {
+               self.isClear = NO;
+           }
+           
+           [self.animator removeItem:obj];
+           [obj removeFromSuperview];
+       }];
+        
+    }];
 }
 
 - (void)tappedGesture:(UITapGestureRecognizer *)gesture
@@ -77,6 +74,16 @@
     CGRect frame = CGRectMake(arc4random() % (NSInteger)CGRectGetWidth(self.view.bounds), -25, 50, 50);
     
     DynamicView *view = [[DynamicView alloc] initWithFrame:frame];
+    
+    UIDynamicItemCollisionBoundsType collisionBoundsType = arc4random() % UIDynamicItemCollisionBoundsTypePath;
+    
+    view.customCollisionBoundsType = collisionBoundsType;
+    if (collisionBoundsType == UIDynamicItemCollisionBoundsTypeEllipse)
+    {
+        view.layer.cornerRadius = 25;
+        view.clipsToBounds = YES;
+    }
+
     [self.view addSubview:view];
     [self.animator addItem:view];
     

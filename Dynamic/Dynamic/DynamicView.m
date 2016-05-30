@@ -26,4 +26,17 @@
                            alpha:1.0];
 }
 
+#pragma mark - UIDynamicItem Delegate
+
+- (UIDynamicItemCollisionBoundsType)collisionBoundsType
+{
+    return self.customCollisionBoundsType;
+}
+
+- (UIBezierPath *)collisionBoundingPath
+{
+    return self.customCollisionBoundingPath ?: [super collisionBoundingPath];
+}
+
+
 @end

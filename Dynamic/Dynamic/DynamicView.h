@@ -10,4 +10,8 @@
 
 @interface DynamicView : UIView
 
+@property (nonatomic, assign) UIDynamicItemCollisionBoundsType customCollisionBoundsType;
+
+@property (nonatomic, strong) UIBezierPath *customCollisionBoundingPath;
+
 @end

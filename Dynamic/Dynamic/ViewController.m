@@ -71,20 +71,20 @@
 
 - (UIView *)createDynamicView
 {
-    CGRect frame = CGRectMake(arc4random() % (NSInteger)CGRectGetWidth(self.view.bounds), -25, 50, 50);
+    CGPoint point = CGPointMake(arc4random() % (NSInteger)CGRectGetWidth(self.view.bounds), 25);
     
-    DynamicView *view = [[DynamicView alloc] initWithFrame:frame];
-    
-    UIDynamicItemCollisionBoundsType collisionBoundsType = arc4random() % UIDynamicItemCollisionBoundsTypePath;
-    
-    view.customCollisionBoundsType = collisionBoundsType;
-    if (collisionBoundsType == UIDynamicItemCollisionBoundsTypeEllipse)
-    {
-        view.layer.cornerRadius = 25;
-        view.clipsToBounds = YES;
-    }
+    DynamicViewType type = arc4random() % DynamicViewTypeStar;
+    DynamicView *view = [[DynamicView alloc] initWithDynamicType:type];
+    CGRect frame = view.frame;
+    frame.origin = point;
+    view.frame = frame;
 
     [self.view addSubview:view];
+    view.alpha = 0;
+    [UIView animateWithDuration:0.5 animations:^{
+        view.alpha = 1.0;
+    }];
+    
     [self.animator addItem:view];
     
     return view;

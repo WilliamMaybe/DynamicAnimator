@@ -10,4 +10,8 @@
 
 @interface UIBezierPath (DynamicView)
 
++ (UIBezierPath *)starBezierPathForDynamicView:(UIView *)view;
++ (UIBezierPath *)roundBezierPathForDynamicView:(UIView *)view;
++ (UIBezierPath *)halfRoundBezierPathForDynamicView:(UIView *)view;
+
 @end

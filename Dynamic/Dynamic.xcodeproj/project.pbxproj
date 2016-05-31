@@ -17,6 +17,7 @@
 		2DC5B89D1CF7149600FEB43F /* DynamicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5B89C1CF7149600FEB43F /* DynamicUITests.m */; };
 		2DC5B8AC1CF714AA00FEB43F /* DynamicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5B8AB1CF714AA00FEB43F /* DynamicView.m */; };
 		2DC5B8AF1CF7150A00FEB43F /* CustomBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5B8AE1CF7150A00FEB43F /* CustomBehavior.m */; };
+		2DF5927F1CFD329900DF6F18 /* UIBezierPath+DynamicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF5927E1CFD329900DF6F18 /* UIBezierPath+DynamicView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		2DC5B8AB1CF714AA00FEB43F /* DynamicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicView.m; sourceTree = "<group>"; };
 		2DC5B8AD1CF7150A00FEB43F /* CustomBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBehavior.h; sourceTree = "<group>"; };
 		2DC5B8AE1CF7150A00FEB43F /* CustomBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBehavior.m; sourceTree = "<group>"; };
+		2DF5927D1CFD329900DF6F18 /* UIBezierPath+DynamicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+DynamicView.h"; sourceTree = "<group>"; };
+		2DF5927E1CFD329900DF6F18 /* UIBezierPath+DynamicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+DynamicView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				2DC5B8AE1CF7150A00FEB43F /* CustomBehavior.m */,
 				2DC5B8AA1CF714AA00FEB43F /* DynamicView.h */,
 				2DC5B8AB1CF714AA00FEB43F /* DynamicView.m */,
+				2DF5927D1CFD329900DF6F18 /* UIBezierPath+DynamicView.h */,
+				2DF5927E1CFD329900DF6F18 /* UIBezierPath+DynamicView.m */,
 				2DC5B8801CF7149600FEB43F /* Main.storyboard */,
 				2DC5B8831CF7149600FEB43F /* Assets.xcassets */,
 				2DC5B8851CF7149600FEB43F /* LaunchScreen.storyboard */,
@@ -282,6 +287,7 @@
 			files = (
 				2DC5B8AC1CF714AA00FEB43F /* DynamicView.m in Sources */,
 				2DC5B87F1CF7149600FEB43F /* ViewController.m in Sources */,
+				2DF5927F1CFD329900DF6F18 /* UIBezierPath+DynamicView.m in Sources */,
 				2DC5B87C1CF7149600FEB43F /* AppDelegate.m in Sources */,
 				2DC5B8791CF7149600FEB43F /* main.m in Sources */,
 				2DC5B8AF1CF7150A00FEB43F /* CustomBehavior.m in Sources */,
@@ -510,6 +516,7 @@
 				2DC5B8A31CF7149600FEB43F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DC5B8A41CF7149600FEB43F /* Build configuration list for PBXNativeTarget "DynamicTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +525,7 @@
 				2DC5B8A61CF7149600FEB43F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DC5B8A71CF7149600FEB43F /* Build configuration list for PBXNativeTarget "DynamicUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +534,7 @@
 				2DC5B8A91CF7149600FEB43F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

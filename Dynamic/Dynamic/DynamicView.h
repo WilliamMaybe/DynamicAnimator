@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, DynamicViewType) {
+    DynamicViewTypeRectangle,
+    DynamicViewTypeHalfRound,
+    DynamicViewTypeRound,
+    DynamicViewTypeStar,
+};
+
 @interface DynamicView : UIView
 
-@property (nonatomic, assign) UIDynamicItemCollisionBoundsType customCollisionBoundsType;
+- (instancetype)initWithDynamicType:(DynamicViewType)dynamicType NS_DESIGNATED_INITIALIZER;
 
+@property (nonatomic, assign) UIDynamicItemCollisionBoundsType customCollisionBoundsType;
 @property (nonatomic, strong) UIBezierPath *customCollisionBoundingPath;
 
 @end

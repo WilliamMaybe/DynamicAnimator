@@ -26,8 +26,7 @@
 {
     CGFloat radius = CGRectGetWidth(view.bounds) / 2;
     
-    CGFloat startAngle = arc4random() % 360 / 360.0;
-    startAngle = startAngle * M_PI;
+    CGFloat startAngle = (arc4random() % 360) / 360.0 * M_PI * 2;
     
     UIBezierPath *bezierPath = [UIBezierPath bezierPathWithArcCenter:CGPointZero radius:radius startAngle:startAngle endAngle:startAngle + M_PI clockwise:YES];
     return bezierPath;

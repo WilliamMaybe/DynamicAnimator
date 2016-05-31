@@ -7,6 +7,7 @@
 //
 
 #import "DynamicView.h"
+#import "UIColor+Category.h"
 #import "UIBezierPath+DynamicView.h"
 
 #define DYNAMIC_VIEW_WIDTH  50
@@ -42,12 +43,13 @@
 
 - (void)commonInit
 {
-    self.backgroundColor = [self randomColor];
+    self.backgroundColor = [UIColor randomColor];
     
     self.customCollisionBoundsType = self.dynamicViewType == DynamicViewTypeRectangle ? UIDynamicItemCollisionBoundsTypeRectangle : UIDynamicItemCollisionBoundsTypePath;
     [self maskLayerHandle];
 }
 
+#pragma mark - BezierPath Set
 - (void)maskLayerHandle
 {
     self.customCollisionBoundingPath = [self customBezierPath];
@@ -74,14 +76,6 @@
         case DynamicViewTypeRound:     return [UIBezierPath roundBezierPathForDynamicView:self];
         case DynamicViewTypeHalfRound: return [UIBezierPath halfRoundBezierPathForDynamicView:self];
     }
-}
-
-- (UIColor *)randomColor
-{
-    return [UIColor colorWithRed:(arc4random() % 255) / 255.0
-                           green:(arc4random() % 255) / 255.0
-                            blue:(arc4random() % 255) / 255.0
-                           alpha:1.0];
 }
 
 #pragma mark - UIDynamicItem Delegate

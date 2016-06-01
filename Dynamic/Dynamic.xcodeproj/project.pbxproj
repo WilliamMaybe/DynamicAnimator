@@ -113,23 +113,14 @@
 		2DC5B8761CF7149600FEB43F /* Dynamic */ = {
 			isa = PBXGroup;
 			children = (
+				2DCA68FF1CFEF574008E2739 /* Category */,
+				2DCA69001CFEF5D8008E2739 /* Dynamic */,
+				2DC5B8771CF7149600FEB43F /* Supporting Files */,
 				2DC5B87A1CF7149600FEB43F /* AppDelegate.h */,
 				2DC5B87B1CF7149600FEB43F /* AppDelegate.m */,
+				2DC5B8801CF7149600FEB43F /* Main.storyboard */,
 				2DC5B87D1CF7149600FEB43F /* ViewController.h */,
 				2DC5B87E1CF7149600FEB43F /* ViewController.m */,
-				2DC5B8AD1CF7150A00FEB43F /* CustomBehavior.h */,
-				2DC5B8AE1CF7150A00FEB43F /* CustomBehavior.m */,
-				2DC5B8AA1CF714AA00FEB43F /* DynamicView.h */,
-				2DC5B8AB1CF714AA00FEB43F /* DynamicView.m */,
-				2DF5927D1CFD329900DF6F18 /* UIBezierPath+DynamicView.h */,
-				2DF5927E1CFD329900DF6F18 /* UIBezierPath+DynamicView.m */,
-				2DF592861CFD91DA00DF6F18 /* UIColor+Category.h */,
-				2DF592871CFD91DA00DF6F18 /* UIColor+Category.m */,
-				2DC5B8801CF7149600FEB43F /* Main.storyboard */,
-				2DC5B8831CF7149600FEB43F /* Assets.xcassets */,
-				2DC5B8851CF7149600FEB43F /* LaunchScreen.storyboard */,
-				2DC5B8881CF7149600FEB43F /* Info.plist */,
-				2DC5B8771CF7149600FEB43F /* Supporting Files */,
 			);
 			path = Dynamic;
 			sourceTree = "<group>";
@@ -137,9 +128,12 @@
 		2DC5B8771CF7149600FEB43F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DC5B8831CF7149600FEB43F /* Assets.xcassets */,
+				2DC5B8881CF7149600FEB43F /* Info.plist */,
+				2DC5B8851CF7149600FEB43F /* LaunchScreen.storyboard */,
 				2DC5B8781CF7149600FEB43F /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		2DC5B8901CF7149600FEB43F /* DynamicTests */ = {
@@ -158,6 +152,28 @@
 				2DC5B89E1CF7149600FEB43F /* Info.plist */,
 			);
 			path = DynamicUITests;
+			sourceTree = "<group>";
+		};
+		2DCA68FF1CFEF574008E2739 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2DF5927D1CFD329900DF6F18 /* UIBezierPath+DynamicView.h */,
+				2DF5927E1CFD329900DF6F18 /* UIBezierPath+DynamicView.m */,
+				2DF592861CFD91DA00DF6F18 /* UIColor+Category.h */,
+				2DF592871CFD91DA00DF6F18 /* UIColor+Category.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2DCA69001CFEF5D8008E2739 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				2DC5B8AD1CF7150A00FEB43F /* CustomBehavior.h */,
+				2DC5B8AE1CF7150A00FEB43F /* CustomBehavior.m */,
+				2DC5B8AA1CF714AA00FEB43F /* DynamicView.h */,
+				2DC5B8AB1CF714AA00FEB43F /* DynamicView.m */,
+			);
+			path = Dynamic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +354,7 @@
 				2DC5B8811CF7149600FEB43F /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		2DC5B8851CF7149600FEB43F /* LaunchScreen.storyboard */ = {
@@ -346,6 +363,7 @@
 				2DC5B8861CF7149600FEB43F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -439,7 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Dynamic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Dynamic/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hikvision.Dynamic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -450,7 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Dynamic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Dynamic/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Hikvision.Dynamic;
 				PRODUCT_NAME = "$(TARGET_NAME)";

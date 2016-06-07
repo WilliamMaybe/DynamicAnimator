@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, DynamicViewType) {
-    DynamicViewTypeRectangle,
-    DynamicViewTypeHalfRound,
-    DynamicViewTypeRound,
-    DynamicViewTypeStar,
+    DynamicViewTypeRectangle = 0,   /// 正方形
+    DynamicViewTypeHalfRound,       /// 半圆
+    DynamicViewTypeRound,           /// 圆形
+    DynamicViewTypePentagon,        /// 五边形
+    DynamicViewTypeStar NS_DEPRECATED_IOS(3_0, 3_0, "自定义图形必须是凸面多变行，或者使用UIDynamicItemGroup实现"),            /// 星形
 };
 
 @interface DynamicView : UIView

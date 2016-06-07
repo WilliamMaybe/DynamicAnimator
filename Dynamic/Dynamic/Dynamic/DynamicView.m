@@ -62,7 +62,6 @@
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
     shapeLayer.path = shapeLayerPath.CGPath;
     shapeLayer.position = CGPointMake(DYNAMIC_VIEW_WIDTH / 2, DYNAMIC_VIEW_WIDTH / 2);
-    
     self.layer.mask = shapeLayer;
     self.layer.masksToBounds = YES;
 }
@@ -75,6 +74,7 @@
         case DynamicViewTypeStar:      return [UIBezierPath starBezierPathForDynamicView:self];
         case DynamicViewTypeRound:     return [UIBezierPath roundBezierPathForDynamicView:self];
         case DynamicViewTypeHalfRound: return [UIBezierPath halfRoundBezierPathForDynamicView:self];
+        case DynamicViewTypePentagon:  return [UIBezierPath pentagonBezierPathForDynamicView:self];
     }
 }
 

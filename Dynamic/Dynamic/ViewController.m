@@ -73,7 +73,7 @@
 {
     CGPoint point = CGPointMake(arc4random() % (NSInteger)CGRectGetWidth(self.view.bounds), 25);
     
-    DynamicViewType type = arc4random() % DynamicViewTypeStar;
+    DynamicViewType type = arc4random() % (DynamicViewTypeStar);
     DynamicView *view = [[DynamicView alloc] initWithDynamicType:type];
     CGRect frame = view.frame;
     frame.origin = point;
